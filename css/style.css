@@ -561,7 +561,7 @@ body {
 
 .days {
     background-color: #F7F7F7;
-    padding: 80px 0;
+    padding: 80px 0 200px;
 }
 
 .days__title {
@@ -597,6 +597,10 @@ body {
     align-items: center;
 }
 
+.days__item-wrapper {
+    position: relative;
+}
+
 .days__item {
     position: relative;
 }
@@ -623,6 +627,10 @@ body {
 .days__item--5 {
     z-index: 6;
     transform: translateX(-72%);
+}
+
+.days__item-img {
+    width: calc(min(26vh, 22vw));
 }
 
 .days__item-number {
@@ -661,6 +669,94 @@ body {
     left: 65%;
 }
 
+.days__item-number-img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.days__item-number-img--1 {
+    left: 35%;
+}
+
+.days__item-number-img--5 {
+    left: 65%;
+}
+
+.days__item-text {
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 26px;
+    color: #060606;
+    mix-blend-mode: normal;
+    position: absolute;
+}
+
+.days__item-text > span {
+    font-weight: 700;
+}
+
+.days__item-text--1 {
+    max-width: 150px;
+}
+
+.days__item-text--2 {
+    max-width: 250px;
+    margin-left: -55px;
+}
+
+.days__item-text--3 {
+    max-width: 155px;
+    margin-left: -55px;
+}
+
+.days__item-text--4 {
+    max-width: 225px;
+    margin-left: -85px;
+}
+
+.days__item-text--5 {
+    max-width: 160px;
+    margin-left: -85px;
+}
+
+@media (max-width: 1200px) {
+    .days {
+        padding-bottom: 80px;
+    }
+
+    .days__items {
+        display: block;
+    }
+
+    .days__item-number-img {
+        left: 50%;
+    }
+
+    .days__item-number {
+        left: 50%;
+    }
+
+    .days__item--2,
+    .days__item--3,
+    .days__item--4,
+    .days__item--5 {
+        transform: translateX(0);
+    }
+
+    .days__item-wrapper {
+        display: flex;
+        align-items: center;
+    }
+
+    .days__item-text {
+        position: static;
+        max-width: 100%;
+        margin-left: 0;
+    }
+}
 
 @media (max-width: 1100px) {
     .marathon__items {
@@ -671,13 +767,13 @@ body {
     .marathon__item {
         width: 45%;
     }
-}
 
-@media (max-width: 768px) {
     .header__img-2 {
         display: none;
     }
+}
 
+@media (max-width: 768px) {
     .header {
         height: 100%;
     }
@@ -770,6 +866,21 @@ body {
 
     .marathon__item {
         width: 90%;
+    }
+
+    .days__subtitle {
+        font-size: 26px;
+        line-height: 30px;
+        margin-bottom: 40px;
+    }
+
+    .days__item-number-img {
+        width: 5%;
+    }
+
+    .days__item-number {
+        width: 50px;
+        height: 50px;
     }
 }
 
@@ -894,6 +1005,42 @@ body {
     }
 
     .marathon__item-list-text {
+        font-size: 16px;
+        line-height: 18px;
+    }
+
+    .days {
+        padding: 40px 0;
+    }
+
+    .days__title {
+        margin-bottom: 28px;
+    }
+
+    .days__subtitle {
+        font-size: 18px;
+        line-height: 20px;
+    }
+
+    .days__item-wrapper {
+        margin-bottom: 10px;
+    }
+
+    .days__item-number-img {
+        display: none;
+    }
+
+    .days__item-number {
+        width: 0;
+        height: 0;
+    }
+
+    .days__item-number {
+        font-size: 20px;
+        line-height: 24px;
+    }
+
+    .days__item-wrapper {
         font-size: 16px;
         line-height: 18px;
     }
